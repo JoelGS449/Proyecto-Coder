@@ -114,9 +114,10 @@ nav > ul > li > a:hover{
 .contIndex{
     display: grid;
     width: 70%;
-    height: 1200px;
+    height: 1000px;
     margin: 150px 15% auto 15%;
-    
+    background: #31a8bd49;
+    border-radius: 50px;
     grid-template-columns: 1/2 1/2;
     grid-template-rows: repeat(2,auto);
     grid-gap: 10px;
@@ -322,6 +323,15 @@ height: 220px;
     flex-direction: column;
     cursor: pointer; /*pone una manita cuando pasa el cursor*/
 }
+
+.contenedorProductos .boxCal:hover,.contenedorProductos .boxCemento:hover,.contenedorProductos .boxFocos:hover,
+.contenedorProductos .boxLijas:hover, .contenedorProductos .boxClavo:hover, .contenedorProductos .boxCalentador:hover, 
+.contenedorProductos .boxPegamento:hover, .contenedorProductos .boxPegazulejo:hover{
+    transform: translate(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+
 
 .contenedorProductos .boxCal{
     grid-area: Cal;
