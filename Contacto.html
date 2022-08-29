@@ -1,0 +1,81 @@
+<!--Joel Gurrola Sanchez-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales Zacatecas</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header>
+        <div class="header_superior">
+            <div class="logo">
+                <img src="./img/logo.jpg">
+            </div>
+            <div class="titulo">
+                <h1>Materiales Zacatecas</h1>
+            </div>
+            <div class="buscador">
+                <input type="search" placeholder="Buscador">
+            </div> 
+            
+        </div>
+        <div class="contenedor_menu">
+            <div class="menu">
+                <nav> 
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./Categorias.html">Categorias</a></li>
+                        <li><a href="./Ventas.html">Mas vendido</a></li>
+                        <li><a href="./Promociones.html">Promociones</a></li>
+                        <li><a href="./Contacto.html" id="selector">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <form method="POST">
+		<div id="contenedor">
+			<h4>Contacto</h4>
+			<p>En breve me pondre en contacto con ustedes...</p>
+			<label>Nombre</label>
+			<br>
+			<input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+			<br>
+			<label>Email</label>
+			<br>
+			<input type="email" name="email" id="email" placeholder="Escribe tu email">
+			<br>
+			<label>Telefono</label>
+			<br>
+			<input type="tel" name="telefono" id="telefono" placeholder="Escribe tu Telefono"  >
+			<br>
+			<label>Sitio web</label>
+			<br>
+			<input type="text" name="sWeb" id="sWeb" placeholder="Escribe tu sitio web">
+			<br>
+			<label>Asunto</label>
+			<br>
+			<input type="text" name="asunto" id="asunto" placeholder="Escribe un asunto">
+			<br>
+			<label>Mensaje</label>
+			<br>
+			<textarea name="mensaje" rows="5" cols="20">
+				Deja aqui tu comentario...
+			</textarea>	
+			<br>
+			<input type="submit" name="enviar" value="Enviar" class="boton">
+			<br>
+			<p>Los campos son obligatorios</p>
+		</div>
+
+		<footer class="fixed_footer">
+			<div class="content">
+			<p>&copy;2022, joel Gurrola</p>
+			</div>
+		  </footer>
+</body>
+</html>

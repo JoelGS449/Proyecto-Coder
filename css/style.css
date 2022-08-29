@@ -1,0 +1,420 @@
+/*Limpiamos la pantalla*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*body{
+    background: rgba(243, 243, 243,.8);
+    
+}*/
+
+html, body{
+    background: rgb(236, 240, 241);
+    min-height: 800px;
+}
+header{
+    width: 100%;
+    position: fixed;/*Para que se mantenga siempre en la parte de arriba*/
+    top: 0;
+    left: 0;
+    display: block;
+} 
+
+/*Header superior*/
+
+ .header_superior{
+    background: #fff;
+    height: 60px;
+    margin: auto;
+    display: flex;/*Para acomodar los objetos en linea*/
+    align-items: center;
+    justify-content: space-between;/*Acomodar la imagen y el buscador */
+    padding: 20px;
+ }
+
+ .logo img{
+    width: 50px;
+    border-radius: 100px;
+ }
+
+ .buscador input{
+    width: 300px;
+    padding: 10px ;
+ }
+
+ h1{
+    font-family:Arial, Helvetica, sans-serif;
+ }
+
+ /*-----------------------*/
+
+ /*Barra del menu*/
+
+ .contenedor_menu{
+    width: 100%;
+    height: 60px;
+    background-color: #F0F0F0;
+    padding: 0px 20px;/*Guardar el espacio al momento de achicar la pagina*/  
+ }
+
+ .menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+ }
+
+ nav{
+    height: 100%;
+ }
+ nav > ul{ /*le ponemos el > para que solo afecte al siguiente ul*/
+    height: 100%;
+    display: flex;
+ }
+
+ nav > ul > li{
+    height: 100%;
+    list-style: none;
+    position: relative;/*Para poder controlar el sub menu*/
+}
+
+
+nav > ul > li >a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #2b2b2b;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition:all 300ms ease;
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1,1);
+    background: #0074C7;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
+}
+
+#selector{
+    transform: scale(1.1);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
+    background: #0074C7;
+}
+
+/*Index---------------------*/
+
+
+.contIndex{
+    display: grid;
+    width: 70%;
+    height: 1200px;
+    margin: 150px 15% auto 15%;
+    
+    grid-template-columns: 1/2 1/2;
+    grid-template-rows: repeat(2,auto);
+    grid-gap: 10px;
+    grid-template-areas: "imgPrin historia"
+                        "imgSec imgSec2"
+                        ;
+    place-items: center;
+}
+
+.contIndex .imgPrin,
+.contIndex .imgSec,
+.contIndex .imgSec2,
+.contIndex .historia{
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.contIndex .imgPrin{
+    grid-area: imgPrin;
+    
+}
+.contIndex .imgPrin img{
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.contIndex .historia{
+    grid-area: historia;
+    align-content: center;
+}
+
+.contIndex .imgSec{
+    grid-area: imgSec;
+}
+
+.contIndex .imgSec img{
+    width: 200px;
+    height: 160px;
+    border-radius: 10px;
+}
+.contIndex .imgSec2 img{
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+.contIndex .imgSec2{
+    grid-area: imgSec2;
+
+}
+
+@media screen and (max-width: 768px){
+    
+    .contIndex{
+        grid-template-areas: "imgPrin imgPrin"
+                        "historia historia"
+                        "imgSec imgSec2"
+                        ;
+    }
+
+}
+
+/*Formulario de la pagina contacto*/
+
+div#contenedor
+{
+    width: 400px;
+    background-color: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+}
+
+.datos
+{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f535c;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.boton
+{
+    width: 100%;
+    background: #1f535c;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    margin:16px 0;
+    font-size: 16px;
+
+}
+
+h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p
+{
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
+label
+{
+    height: 40px;
+    font-size: 18px;
+}
+
+/*___________________________________________________________________*/
+
+/*Pagina Categorias*/
+
+.contenedorCategorias{
+    margin-top: 200px;
+    border-color: #1f535c;
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*margin: auto;*/
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.contenedorCategorias .cardCategorias{
+width: 330px;
+height: 430px;
+border-radius: 8px;
+box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+margin: 20px;
+text-align: center;
+transition: all 0.25s;
+}
+
+.contenedorCategorias .cardCategorias:hover{
+    transform: translate(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contenedorCategorias .cardCategorias img{
+width: 330px;
+height: 220px;
+}
+
+.contenedorCategorias .cardCategorias h4{
+    font-weight: 600;
+}
+
+.contenedorCategorias .cardCategorias p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.contenedorCategorias .cardCategorias a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #1f535c;
+}
+
+/*Productos mas vendidos*/
+
+.contenedorProductos{
+   max-width: 1100px;
+   margin: auto; 
+   margin-top: 200px;
+   display: grid;
+   grid-template-rows: 1/4 1/4 1/4 1/4 ;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 10px;
+    grid-template-areas: "Cal Clavo Cemento Pegamento"
+                        "Focos Lijas Calentador Pegazulejo";
+    place-items: center;
+}
+
+.contenedorProductos .boxCal,.contenedorProductos .boxCemento,.contenedorProductos .boxFocos,
+.contenedorProductos .boxLijas, .contenedorProductos .boxClavo, .contenedorProductos .boxCalentador, 
+.contenedorProductos .boxPegamento, .contenedorProductos .boxPegazulejo{
+    width: 218px;
+    height: 200px;
+    background: #fff;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer; /*pone una manita cuando pasa el cursor*/
+}
+
+.contenedorProductos .boxCal{
+    grid-area: Cal;
+}
+
+.contenedorProductos .boxClavo{
+    grid-area: Clavo;
+}
+
+.contenedorProductos .boxCemento{
+    grid-area: Cemento;
+}
+
+.contenedorProductos .boxLijas{
+    grid-area: Lijas;
+}
+
+.contenedorProductos .boxCalentador{
+    grid-area: Calentador;
+}
+
+.contenedorProductos .boxPegamento{
+    grid-area: Pegamento;
+}
+
+.contenedorProductos .boxPegazulejo{
+    grid-area: Pegazulejo;
+}
+
+.contenedorProductos .boxFocos{
+    grid-area: Focos;
+}
+
+
+.contenedorProductos img{
+    height: 60px;
+    width: 60px;
+}
+
+.contenedorProductos h5{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(41, 41, 41, 0.664);
+}
+
+@media screen and (max-width: 768px){
+    
+    .contenedorProductos{
+        grid-template-areas: "Cal Clavo" 
+                            "Cemento Pegamento"
+                            "Focos Lijas" 
+                            "Calentador Pegazulejo";;
+    }
+
+}
+/*---------------Footer----------------*/
+.content{
+    width: 850px; 
+    margin: auto;
+    margin-bottom: 350px; /* Same height as footer */
+    padding: 100px 0;
+  }
+    h1{
+      color: #111;
+      font-size: 3em;
+      font-weight: 900;
+      padding: 0 0 20px 0;
+    }
+    h2{
+      color: #111;
+      font-size: 2em;
+      font-weight: 900;
+      padding: 0 0 15px 0;
+    }
+    p{
+      font-size: 1.25em;
+      padding: 0 0 40px 0;
+    }
+  
+  .fixed_footer{
+    width: 100%;
+    height: 250px;
+    background: #111;
+    position: fixed; left: 0; bottom: 0;
+    z-index: -100;
+  }
+.fixed_footer p{
+color: #696969;
+column-count: 2;
+column-gap: 50px;
+font-size: 1em;
+font-weight: 300;
+}
+
+
